@@ -1,9 +1,11 @@
 1kB javascript raytracer
 ===
 
-made for js1k 2012 - "love"
+Made for [js1k 2012 - "love"](http://js1k.com/2012-love/)
 
-Check it out here: https://rawgithub.com/bwiklund/js1k-love-raytracer/master/index.html
+See it in action here: https://rawgithub.com/bwiklund/js1k-love-raytracer/master/index.html
+
+![render 3](https://raw.github.com/bwiklund/js1k-love-raytracer/master/samples/shot3.png)
 
 It takes several render passes before it looks any good, and it's quite slow.
 
