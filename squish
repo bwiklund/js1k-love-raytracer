@@ -1,4 +1,3 @@
 #!/bin/bash
-java -jar yuicompressor-2.4.6.jar js.js > min.js
-ls -l js.js
-ls -l min.js
+
+node_modules/.bin/uglifyjs js.js > min.js && ls -la *.js

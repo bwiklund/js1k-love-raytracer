@@ -1,0 +1,18 @@
+{
+  "name": "js1k-love-raytracer",
+  "version": "0.0.0",
+  "description": "javascript raytracer in 984 bytes ===",
+  "main": "js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bwiklund/js1k-love-raytracer.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/bwiklund/js1k-love-raytracer/issues"
+  }
+}
