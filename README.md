@@ -1,4 +1,4 @@
-javascript raytracer in 988 bytes
+javascript raytracer in 984 bytes
 ===
 
 Made for [js1k 2012 - "love"](http://js1k.com/2012-love/)
