@@ -20,8 +20,8 @@ D = T.data; //the actual image data to write to directly
 //a function to detect if a photon is inside a sphere, plus the X and Y offset of the sphere. 
 //(z is always 0 for the spheres in this scene, so i don't need it)
 function z(v,x,y){
-	var X = v[0]+x;
-	var Y = v[1]+y;
+	X = v[0]+x;
+	Y = v[1]+y;
 	return X*X+Y*Y+v[2]*v[2] < 1;
 }
 
