@@ -72,7 +72,7 @@ B = function(){
 			
 			//light sources
 			if( z(p,2.5,1) ){
-				g = 2; b=3; r=3; break;
+				g = 2; b=r=3; break;
 			}
 			if( z(p,-2.5,1) ){
 				r = 3; break;
