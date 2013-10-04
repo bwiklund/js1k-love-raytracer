@@ -47,11 +47,10 @@ B = function(){
 		//also, randomize it within that pixel for antialising
 		v = [ (0.5-(x+R()/w))*0.03,(0.5-(y+R()/w))*0.03,0.03 ]; //vector
 		
-		r=g=b=0; //r,g, and b are the levels of illumination from each color
 		d = 1; //to tell if the surface was hit
 		
 		//do 400 steps before giving up
-		for( I = 0; I++ < 400; ){
+		for( r=g=b=I=0; I++ < 400; ){
 			
 			//add vector to photon position
 			for(i=0;i<3;) p[i]+=v[i++]*(1-R()/2);
@@ -88,11 +87,11 @@ B = function(){
 		j = M.max(0,v[1]*27);
 		
 		//add the light values to the frame buffer
-		f[q*3  ] += r+j*1.5;
-		f[q*3+1] += d*g+j;
-		f[q*3+2] += d*b+j;
+		f[Q=q*3] += r+j*1.5;
+		f[++Q] += d*g+j;
+		f[++Q] += d*b+j;
 		
-		q = (++m)%(w*w);
+		q = ++m%(w*w);
 	}
 	
 	I = M.ceil(m/w/w)/255;
@@ -106,7 +105,7 @@ B = function(){
 	for( y = 0; y < W; ){
 		i = (P(x/5)+P(y/5)*w);
 		j = (x+ + y++ *W)*4;
-		if( i > q && q != 0 ) break
+		if( i > q && q ) break
 		for( L = 0; L < 3; ) D[j+L] = f[i*3+L++]/I;
 		D[j+3] = 255;
 	}
