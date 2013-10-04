@@ -25,23 +25,10 @@ function z(v,x,y){
 }
 
 //some variables that get reused.
-m=	//pixelcount
-i=	//general use
-I=	//general use
-j=	//general use
-L=	//general use
-x=	//general use, usually X
-y=	//general use, usually Y
-r=  //red
-g=  //blue
-b=  //green
-p=  //the photon
-v=  //photon direction
-d=  //diffuse color
-q=0	//screen pixel count
+m=0
 
 f = [] // f for framebuffer
-for( ; q < w*w*3; ) f[q++] = 0
+for( q=0; q < w*w*3; ) f[q++] = 0
 
 
 // m is the framecount
