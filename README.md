@@ -29,4 +29,4 @@ To minify:
 
 `./squish`
 
-Pull requests arevery welcome!
+Pull requests are very welcome!
