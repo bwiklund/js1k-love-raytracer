@@ -1,3 +1,0 @@
-#!/bin/bash
-
-node_modules/.bin/uglifyjs js.js > min.js && ls -la *.js
