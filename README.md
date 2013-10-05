@@ -20,3 +20,13 @@ Because it fits in under 1024 bytes of javascript, sacrifices had to be made:
 - Photons are steped through space in small increments, then check for collisions. Actual sphere-line intersection and reflection would have taken up way too many bytes!
 - No support for glossy materials, for above reason. When a photon finds itself within a sphere / heart shape, it changes it's direction randomly, and continues on it's way. Thus, diffuse surfaces.
 - Fairly slow. Code length was the only thing optimized for.
+
+It uses uglifyjs for the final minification step. To get dependencies:
+
+`npm install`
+
+To minify:
+
+`./squish`
+
+Pull requests arevery welcome!
