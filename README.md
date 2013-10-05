@@ -25,6 +25,8 @@ It uses uglifyjs for the final minification step. To get dependencies:
 
 `npm install`
 
+If you don't already have grunt installed globally, `npm install -g grunt-cli`
+
 To minify:
 
 `./squish`

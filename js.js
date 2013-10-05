@@ -56,7 +56,12 @@ B = function(){
 			for(i=0;i<3;) p[i]+=v[i++]//*(1-R()/2);
 			
 			//foggy blur
-			if( R()<0.004 )for(i=0;i<3;)v[i++] += A()*0.01;
+		  //this is by far the most obscene omtimization here...
+		  //instead of reinitializing i=0, we know it's 3 from the last loop,
+		  //so we iterate downwards instead. 
+		  //also, the loop stops at zero, so i omit ;i>=0 in favor of truthyness.
+		  //it saved 5 bytes.
+			if( R()<0.004 )for(;i;)v[--i] += A()*0.01;
 			
 			//heart shape
 			x = 0.7*(p[0]);
