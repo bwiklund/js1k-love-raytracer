@@ -36,7 +36,7 @@ for( q=0; q < w*w*3; ) f[q++] = 0
 B = function(){
 	//for( var i = 0; i < 10000; i++ ){
 	//for( q=0;q<w*h; ){
-	for( L=0;L++<w*10; ){
+	for( L=0;L++<w*20; ){
 		x = q%w/w;
 		y = (q-q%w)/w/w;
 		
@@ -49,14 +49,14 @@ B = function(){
 		
 		d = 1; //to tell if the surface was hit
 		
-		//do 400 steps before giving up
-		for( r=g=b=I=0; I++ < 400; ){
+		//do 200 steps before giving up
+		for( r=g=b=I=0; I++ < 200; ){
 			
 			//add vector to photon position
-			for(i=0;i<3;) p[i]+=v[i++]*(1-R()/2);
+			for(i=0;i<3;) p[i]+=v[i++]//*(1-R()/2);
 			
 			//foggy blur
-			if( R()<0.003 )for(i=0;i<3;)v[i++] += A()*0.01;
+			if( R()<0.004 )for(i=0;i<3;)v[i++] += A()*0.01;
 			
 			//heart shape
 			x = 0.7*(p[0]);
