@@ -112,7 +112,7 @@ B = function(){
 	a.putImageData( T,0,0 );    
 	
 	//and start the loop over
-	setTimeout(B,5);
+	setTimeout(B);
 }
 
 B();
