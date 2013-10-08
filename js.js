@@ -8,7 +8,6 @@ c.width = c.height = W;
 M = Math
 R = M.random
 function A(){ return R()-0.5 } //random range from -0.5 to 0.5
-P = parseInt
 
 //create the image we'll be writing to. 
 //writing directly to this sort of image, 
@@ -106,7 +105,7 @@ B = function(){
   //smoothing, and I think the aliased, pixelly look is prettier.
   for( x = 0; x < W; x++)
     for( y = 0; y < W; ){
-      i = (P(x/5)+P(y/5)*w);
+      i = (~~(x/5)+~~(y/5)*w);
       j = (x+ + y++ *W)*4;
       if( i > q && q ) break
       for( L = 0; L < 3; ) D[j+L] = f[i*3+L++]/I;
