@@ -29,6 +29,6 @@ If you don't already have grunt installed globally, `npm install -g grunt-cli`
 
 To minify:
 
-`./squish`
+`grunt`
 
 Pull requests are very welcome!
