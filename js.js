@@ -1,4 +1,4 @@
-w = 130; //width doubles as height, to save 6 bytes overall
+w = 120; //width doubles as height, to save 6 bytes overall
 W = w*5; //pixel width
 c.width = c.height = W;
 
