@@ -25,11 +25,9 @@ function z(v,x,y){
   return X*X+Y*Y+v[2]*v[2] < 1;
 }
 
-//some variables that get reused.
-m=0
-
 f = [] // f for framebuffer
-for( q=0; q < w*w*3; ) f[q++] = 0
+// m is the vertical row count, which we use later, and save a byte by initializing here
+for( q=m=0; q < w*w*3; ) f[q++]=0
 
 
 // m is the framecount
