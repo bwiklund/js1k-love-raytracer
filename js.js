@@ -74,13 +74,13 @@ B = function(){
       
       //light sources
       if( z(p,2.5,1) ){
-        g = 2; b=r=3; break;
+        g = 2; b=r=3;
       }
       if( z(p,-2.5,1) ){
-        r = 3; break;
+        r = 3;
       }
       if( z(p,0,-2.5) || z(p,0,3) ){
-        g=b=2;r=3; break;
+        g=b=2;r=3;
       }
       
     }
