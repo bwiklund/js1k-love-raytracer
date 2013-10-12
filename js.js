@@ -1,5 +1,6 @@
 //width doubles as height, to save 6 bytes overall
-c.width = c.height = w = 120;
+c.width = c.height = w = 120
+// c.style.width = w*2 // this would be nice if it was nearest neighbor but it's not
 
 //b.style.background = "#000"; //i like a black background, but this is way too expensive
 
@@ -96,7 +97,7 @@ B = function(){
 
     // update framebuffer from array of floats
     for( P = 0; P < 3; ) D[I*4+P] = f[I*3+P++]/K*255;
-    D[I-- *4 +3] = 255;
+    D[I-- *4 +3] = 255; // note that I is decremented here
     // D[I*4] = 255;
   }
   
