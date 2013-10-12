@@ -1,6 +1,5 @@
-w = 120; //width doubles as height, to save 6 bytes overall
-W = w*5; //pixel width
-c.width = c.height = W;
+//width doubles as height, to save 6 bytes overall
+c.width = c.height = w = 120;
 
 //b.style.background = "#000"; //i like a black background, but this is way too expensive
 
@@ -13,7 +12,7 @@ function A(){ return R()-0.5 } //random range from -0.5 to 0.5
 //writing directly to this sort of image, 
 //and then using built in methods to write it to the canvas, 
 //is a ton faster than trying write pixels directly to the canvas
-T = a.createImageData(W,W);
+T = a.createImageData(w,w);
 D = T.data; //the actual image data to write to directly
 
 //a function to detect if a photon is inside a sphere, plus the X and Y offset of the sphere. 
@@ -33,7 +32,7 @@ for( q=m=0; q < w*w*3; ) f[q++]=0
 B = function(){
   //for( var i = 0; i < 10000; i++ ){
   //for( q=0;q<w*h; ){
-  for( L=0;L++<w*20; ){
+  for( L=0;L++<w*w; ){
     x = q%w/w;
     y = (q-q%w)/w/w;
     
@@ -103,14 +102,10 @@ B = function(){
   //so I wanted to scale it up to make it cheaper.
   //but the default image scaling in most browsers uses
   //smoothing, and I think the aliased, pixelly look is prettier.
-  for( x = 0; x < W; x++)
-    for( y = 0; y < W; ){
-      i = (~~(x/5)+~~(y/5)*w);
-      j = (x+ + y++ *W)*4;
-      if( i > q && q ) break
-      for( L = 0; L < 3; ) D[j+L] = f[i*3+L++]/I;
-      D[j+3] = 255;
-    }
+  for( i=0; i<w*w;){
+    for( L = 0; L < 3; ) D[i*4+L] = f[i*3+L++]/I;
+    D[i++ *4 +3] = 255;
+  }
   a.putImageData( T,0,0 );    
   
   //and start the loop over
