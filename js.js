@@ -33,7 +33,7 @@ B = function(){
   K++;
   //for( var i = 0; i < 10000; i++ ){
   //for( q=0;q<w*h; ){
-  for( I=0;I<w*w; ){
+  for( I=w*w;I; ){ // I = pixel offset (x*w+y). counts down to save bytes
     x = I%w/w;
     y = ~~(I/w)/w;
     
@@ -96,7 +96,7 @@ B = function(){
 
     // update framebuffer from array of floats
     for( P = 0; P < 3; ) D[I*4+P] = f[I*3+P++]/K*255;
-    D[I++ *4 +3] = 255;
+    D[I-- *4 +3] = 255;
     // D[I*4] = 255;
   }
   
