@@ -24,13 +24,13 @@ function Z(v,x,y){
 }
 
 f = [] // f for framebuffer
-// m is the vertical row count, which we use later, and save a byte by initializing here
-for( i=0; i < w*w*3; ) f[i++]=0
 
-K=1; //TODO: sneak in elsewhere
+// K is the framecount
+// reusing K here, essentially initializing it to zero for the rest
+for( K=w*w*3;K; ) f[--K]=0
 
-// m is the framecount
 B = function(){
+  K++;
   //for( var i = 0; i < 10000; i++ ){
   //for( q=0;q<w*h; ){
   for( I=0;I<w*w; ){
@@ -100,7 +100,6 @@ B = function(){
     // D[I*4] = 255;
   }
   
-  K++;
 
   a.putImageData( T,0,0 );    
   
